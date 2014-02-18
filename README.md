@@ -37,9 +37,32 @@ Credits
 As you may have already noticed, most vital parts of the UI components are comming from other popular open source projects. We give full credits for them for those components.
 
 **Fries**
+
 https://github.com/jaunesarmiento/fries
+
 All the fries components are used with few changes to its source to make it faster and to be webkit specific.
 
+
 **Zynga Scroller**
+
 http://zynga.github.io/scroller/
+
 To implement push-refresh and smooth scrolling, the zynga scroller is added as an optional component. Users can decide to use or not use it.
+
+List of available components
+----------------------------
+
+1.  Action-bar
+2.  Icons for most of the buttons
+3.  Accordion
+4.  Buttons
+5.  Dialog
+6.  Drawer
+7.  Forms
+8.  Grid / Grid View
+9.  List
+10.  Slider
+11.  Tabs
+12.  Toasts
+13.  Bouncy-smooth scrolling
+14.  Pull-to-refresh for lists
