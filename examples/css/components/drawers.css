@@ -1,0 +1,65 @@
+/*
+    Drawer Style
+*/
+.drawer{
+    position: fixed;
+    top:0px;    
+    z-index: 5;
+    width: 300px;
+    height: 100%;
+    background: #434343;
+    color: white;
+    padding: 10px;
+    box-shadow: 0px 5px 5px 1px #000000;    
+    -webkit-transform: translate3d(0, 0, 0) !important;
+    -webkit-backface-visibility: hidden !important;
+    -webkit-perspective: 1000 !important;
+}
+.page,.content{
+    -webkit-transform: translate3d(0, 0, 0) !important;
+    -webkit-backface-visibility: hidden !important;
+    -webkit-perspective: 1000 !important;
+}
+.action-bar ~ .drawer{
+    top: 48px;
+}
+
+
+.drawer.right{
+    right:-300px;
+    transition: right 100ms;
+}
+.drawer.right.drawer-open{
+    visibility: visible;
+    right:0px;
+}
+.drawer.right.push.drawer-open ~ .page{
+    left:-300px !important;
+    transition: left 350ms;    
+}
+.action-bar ~ .drawer.right.push.drawer-open ~ .content{
+    left:-300px !important;
+    transition: left 350ms;
+}
+
+.drawer.left{
+    left:-300px;
+    transition: left 100ms;
+}
+.drawer.left.drawer-open{
+    visibility: visible;
+    left:0px;
+}
+.drawer.left.push.drawer-open ~ .page{
+    left:300px !important;
+    transition: left 350ms;
+}
+.action-bar ~ .drawer.left.push.drawer-open ~ .content{
+    left:300px !important;
+    transition: left 350ms;
+}
+
+.drawer.push{
+    transition: none;
+}
+

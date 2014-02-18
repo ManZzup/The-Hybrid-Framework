@@ -1,0 +1,312 @@
+<!doctype html>
+<html>
+<head>
+<title>The Hybrid Framework</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+
+
+<link href="css/components/base.css" rel="stylesheet" type="text/css">
+<link href="css/components/content.css" rel="stylesheet" type="text/css">
+<link href="css/components/icomoon.css" rel="stylesheet" type="text/css">
+
+<link href="css/components/action-bars.css" rel="stylesheet" type="text/css">
+<link href="css/components/drawers.css" rel="stylesheet" type="text/css">
+<link href="css/components/spinners.css" rel="stylesheet" type="text/css">
+<link href="css/components/lists.css" rel="stylesheet" type="text/css">
+<link href="css/components/tabs.css" rel="stylesheet" type="text/css">
+<link href="css/components/accordions.css" rel="stylesheet" type="text/css">
+<link href="css/components/forms.css" rel="stylesheet" type="text/css">
+<link href="css/components/buttons.css" rel="stylesheet" type="text/css">
+<link href="css/components/dialogs.css" rel="stylesheet" type="text/css">
+<link href="css/components/toasts.css" rel="stylesheet" type="text/css">
+
+
+<link href="css/ex.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" src="js/Animate.js"></script>
+<script type="text/javascript" src="js/Scroller.js"></script>
+<script type="text/javascript" src="js/EasyScroller.js"></script>
+<script type="text/javascript" src="js/EasyPuller.js"></script>
+
+<script type="text/javascript" src="js/components/action-bars.js"></script>
+<script type="text/javascript" src="js/components/drawers.js"></script>
+<script type="text/javascript" src="js/components/spinners.js"></script>
+<script type="text/javascript" src="js/components/tabs.js"></script>
+<script type="text/javascript" src="js/components/utils.js"></script>
+<script type="text/javascript" src="js/components/dialogs.js"></script>
+<script type="text/javascript" src="js/components/toasts.js"></script>
+
+<script type="text/javascript" src="js/ex.js"></script>
+
+</head>
+<body>
+    
+    
+    
+    <div class="page" id="page">    
+     <div class="action-bar">
+            
+         <div id="block-buttons">
+            <a href="#" class="app-icon action up" ontouchstart="drawerOpen('drawer1')">
+              <i class="icon-storage"></i>
+            </a>        
+            <h2 class="title">The Hybrid Framework <span class="subtitle">Action Bars</span></h2> 
+            <ul class="actions pull-right">
+                <li><a href="javascript: void(0);" class="action" title="Search" onclick="showSearch()"><i class="icon-search"></i></a></li>
+                <li><a href="javascript: void(0);" class="action" title="Copy"><i class="icon-copy"></i></a></li>
+                <li><a href="javascript: void(0);" class="action" title="Cut"><i class="icon-cut"></i></a></li>
+                <li><a href="javascript: void(0);" class="action" title="Settings"><i class="icon-settings"></i></a></li>               
+            </ul>  
+         </div>
+         
+            <form class="form-flex" id="block-search" style="display: none">
+            <div class="flex-group">
+                
+                    <a href="#" class="app-icon action up"  onclick="hideSearch()">
+                        <i class="icon-chevron-left"></i>
+                    </a>  
+                <span class="input-pretty">
+                    <input type="text" class="input-text" placeholder="Search" style="color:#ccc">
+                </span> 
+          
+            </div>
+            </form>
+                      
+            
+     </div>
+    
+    <div class="drawer left push" id="drawer1">
+        <div data-scrollable="y">
+        <h2>Menu</h2>
+        <ul class="list">   
+                <li class="list-divider">Groups</li>
+                <li class="list-item-single-line selectable"><a href="javascript: void(0);" data-ignore="true">Acquaintances</a></li>
+                <li class="list-item-single-line selectable"><a href="javascript: void(0);" data-ignore="true">Family</a></li>
+                <li class="list-item-single-line selectable"><a href="javascript: void(0);" data-ignore="true">Friends</a></li>
+                <li class="list-item-single-line selectable"><a href="javascript: void(0);" data-ignore="true">Work</a></li>
+            </ul>
+        </div>
+    </div>
+        
+    <div class="content" ontouchend="drawerClose('drawer1')">   
+        
+        <nav class="tab-fixed">
+      <ul class="tab-inner">
+          <li class="active"><a href="#people" data-ignore="true"><i class="icon-person"></i>List</a></li>
+        <li><a href="#groups" data-ignore="true"><i class="icon-group"></i>Accordion</a></li>
+        <li><a href="#favorites" data-ignore="true"><i class="icon-edit"></i>Form</a></li>
+        <li><a href="#stuff" data-ignore="true"><i class="icon-star-full"></i>Stuff</a></li>
+      </ul>
+    </nav>
+
+    <div class="content">
+      <div class="slider tab-slider">
+        <ul>
+          <li id="people" class="tab-item active">
+                   
+              
+            <ul class="list inset" id="pull">
+              <li id="loader">Pull to refresh</li>
+              <li class="list-divider">Inspiration</li>
+              <li class="list-item-multi-line">
+                <a href="javascript: void(0);" data-ignore="true">
+                  <h4>Brendan Eich</h4>
+                  <p>Brendan Eich, born 1961, is an American computer programmer and creator of the JavaScript scripting language. He is the chief technology officer at the Mozilla Corporation.</p>
+                </a>
+              </li>
+              <li class="list-item-multi-line">
+                <a href="javascript: void(0);" data-ignore="true">
+                  <h4>John Resig</h4>
+                  <p>John Resig is an American computer programmer and entrepreneur, best known as the creator and lead developer of the jQuery JavaScript library.</p>
+                </a>
+              </li>
+              <li class="list-item-multi-line">
+                <a href="javascript: void(0);" data-ignore="true">
+                  <h4>Douglas Crockford</h4>
+                  <p>Douglas Crockford is an American computer programmer and entrepreneur who is best known for his ongoing involvement in the development of the JavaScript language, for having popularized the data format JSON (JavaScript Object Notation), and for developing various JavaScript related tools such as JSLint and JSMin. He is currently a senior JavaScript architect at PayPal, and is also a writer and speaker on JavaScript, JSON, and related web technologies such as the Yahoo! User Interface Library (YUI).</p>
+                </a>
+              </li>
+              <li class="list-item-multi-line">
+                <a href="javascript: void(0);" data-ignore="true">
+                  <h4>Paul Irish</h4>
+                  <p>Paul Irish is an American front-end web developer, and developer advocate for Google Chrome. He is also recognized as an expert in cutting edge Web Technologies like HTML5 and CSS3.</p>
+                </a>
+              </li><li class="list-item-single-line selectable"><a href="javascript: void(0);" data-ignore="true">Family</a></li>
+                <li class="list-item-single-line selectable"><a href="javascript: void(0);" data-ignore="true">Friends</a></li>
+                <li class="list-item-single-line selectable"><a href="javascript: void(0);" data-ignore="true">Work</a></li>
+            </ul>
+          </li>
+          <li id="groups" class="tab-item">
+            
+              <!--
+               <section class="ac-container inset">
+				<div>
+					<input id="ac-1" name="accordion-1" type="radio" />
+					<label for="ac-1">About us</label>
+					<article class="ac-small">
+                                            <p>test</p>                                           
+					</article>
+				</div>
+				<div>
+					<input id="ac-2" name="accordion-1" type="radio" />
+					<label for="ac-2">How we work</label>
+					<article class="ac-medium">
+						<p>Like you, I used to think the world was this great place where everybody lived by the same standards I did, then some kid with a nail showed me I was living in his world, a world where chaos rules not order, a world where righteousness is not rewarded. That's Cesar's world, and if you're not willing to play by his rules, then you're gonna have to pay the price. </p>
+					</article>
+				</div>
+				<div>
+					<input id="ac-3" name="accordion-1" type="checkbox" />
+					<label for="ac-3">References</label>
+					<article class="ac-large">
+						<p>You think water moves fast? You should see ice. It moves like it has a mind. Like it knows it killed the world once and got a taste for murder. After the avalanche, it took us a week to climb out. Now, I don't know exactly when we turned on each other, but I know that seven of us survived the slide... and only five made it out. Now we took an oath, that I'm breaking now. We said we'd say it was the snow that killed the other two, but it wasn't. Nature is lethal but it doesn't hold a candle to man. </p>
+					</article>
+				</div>
+				<div>
+					<input id="ac-4" name="accordion-1" type="checkbox" />
+					<label for="ac-4">Contact us</label>
+					<article class="ac-large">
+						<p>You see? It's curious. Ted did figure it out - time travel. And when we get back, we gonna tell everyone. How it's possible, how it's done, what the dangers are. But then why fifty years in the future when the spacecraft encounters a black hole does the computer call it an 'unknown entry event'? Why don't they know? If they don't know, that means we never told anyone. And if we never told anyone it means we never made it back. Hence we die down here. Just as a matter of deductive logic. </p>
+					</article>
+				</div>
+			</section>
+              
+              -->
+              
+              <div class="accordion vertical">
+		  <section id="vertabout">
+		      <h2><a href="#vertabout">About Us</a></h2>
+		      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse id lobortis massa. Nunc viverra velit leo, sit amet elementum mi. Fusce posuere nunc a mi tempus malesuada. Curabitur facilisis rhoncus eros eget placerat. Aliquam semper mauris sit amet justo tempor nec lacinia magna molestie. Etiam placerat congue dolor vitae adipiscing. Aliquam ac erat lorem, ut iaculis justo. Etiam mattis dignissim gravida. Aliquam nec justo ante, non semper mi. Nulla consectetur interdum massa, vel porta enim vulputate sed. Maecenas elit quam, egestas eget placerat non, fringilla vel eros. Nam vehicula elementum nulla sed consequat. Phasellus eu erat enim. Praesent at magna non massa dapibus scelerisque in eu lorem.</p>
+		  </section>
+		  <section id="vertservices">
+		      <h2><a href="#vertservices">Services</a></h2>
+		      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse id lobortis massa. Nunc viverra velit leo, sit amet elementum mi. Fusce posuere nunc a mi tempus malesuada. Curabitur facilisis rhoncus eros eget placerat. Aliquam semper mauris sit amet justo tempor nec lacinia magna molestie. Etiam placerat congue dolor vitae adipiscing. Aliquam ac erat lorem, ut iaculis justo. Etiam mattis dignissim gravida. Aliquam nec justo ante, non semper mi. Nulla consectetur interdum massa, vel porta enim vulputate sed. Maecenas elit quam, egestas eget placerat non, fringilla vel eros. Nam vehicula elementum nulla sed consequat. Phasellus eu erat enim. Praesent at magna non massa dapibus scelerisque in eu lorem.</p>
+		  </section>
+		  <section id="vertblog">
+		      <h2><a href="#vertblog">Blog</a></h2>
+		      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse id lobortis massa. Nunc viverra velit leo, sit amet elementum mi. Fusce posuere nunc a mi tempus malesuada. Curabitur facilisis rhoncus eros eget placerat. Aliquam semper mauris sit amet justo tempor nec lacinia magna molestie. Etiam placerat congue dolor vitae adipiscing. Aliquam ac erat lorem, ut iaculis justo. Etiam mattis dignissim gravida. Aliquam nec justo ante, non semper mi. Nulla consectetur interdum massa, vel porta enim vulputate sed. Maecenas elit quam, egestas eget placerat non, fringilla vel eros. Nam vehicula elementum nulla sed consequat. Phasellus eu erat enim. Praesent at magna non massa dapibus scelerisque in eu lorem.</p>
+		  </section>
+		  <section id="vertportfolio">
+		      <h2><a href="#vertportfolio">Portfolio</a></h2>
+		      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse id lobortis massa. Nunc viverra velit leo, sit amet elementum mi. Fusce posuere nunc a mi tempus malesuada. Curabitur facilisis rhoncus eros eget placerat. Aliquam semper mauris sit amet justo tempor nec lacinia magna molestie. Etiam placerat congue dolor vitae adipiscing. Aliquam ac erat lorem, ut iaculis justo. Etiam mattis dignissim gravida. Aliquam nec justo ante, non semper mi. Nulla consectetur interdum massa, vel porta enim vulputate sed. Maecenas elit quam, egestas eget placerat non, fringilla vel eros. Nam vehicula elementum nulla sed consequat. Phasellus eu erat enim. Praesent at magna non massa dapibus scelerisque in eu lorem.</p>
+		  </section>
+		  <section id="vertcontact">
+		      <h2><a href="#vertcontact">Contact</a></h2>
+		      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse id lobortis massa. Nunc viverra velit leo, sit amet elementum mi. Fusce posuere nunc a mi tempus malesuada. Curabitur facilisis rhoncus eros eget placerat. Aliquam semper mauris sit amet justo tempor nec lacinia magna molestie. Etiam placerat congue dolor vitae adipiscing. Aliquam ac erat lorem, ut iaculis justo. Etiam mattis dignissim gravida. Aliquam nec justo ante, non semper mi. Nulla consectetur interdum massa, vel porta enim vulputate sed. Maecenas elit quam, egestas eget placerat non, fringilla vel eros. Nam vehicula elementum nulla sed consequat. Phasellus eu erat enim. Praesent at magna non massa dapibus scelerisque in eu lorem.</p>
+		  </section>
+		</div>
+          </li>
+          <li id="favorites" class="tab-item">
+              <form class="form-flex inset">
+
+                  <label>Text Input</label>
+                    <div class="flex-group">
+                        <span class="input-pretty">
+                            <input type="text" class="input-text flex1" placeholder="First Name">
+                        </span>
+                      <input type="text" class="input-text flex1" placeholder="Last Name">
+                    </div>
+
+                    
+                    <div class="flex-group">
+                      <input type="tel" class="input-text flex2" placeholder="Phone">
+                      <div class="form-spinner">
+                          <a href="javascript: void(0);" class="toggle-spinner" style="color:black">Mobile</a>
+                        <ul class="spinner">
+                          <li class="spinner-item"><a href="javascript: void(0);">Work</a></li>
+                          <li class="spinner-item"><a href="javascript: void(0);">Home</a></li>
+                          <li class="spinner-item"><a href="javascript: void(0);">Main</a></li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <label class="block-label">Automatic Updates</label>
+                    <div class="flex-group">
+                      <label class="input-switch-wrapper">
+                        <input type="checkbox" class="input-switch">
+                        <div class="input-switch-outer">
+                          <div class="input-switch-inner">
+                            <div class="input-switch-button"></div>
+                          </div>
+                        </div>
+                      </label>
+                    </div>
+
+                    <div class="flex-group">
+                      <label class="input-radio-wrapper">
+                        <input type="radio" name="test" class="input-radio" disabled>
+                        <div class="input-radio-inner">
+                          <div class="input-radio-button"></div>
+                        </div>
+                      </label>
+
+                      <label class="input-radio-wrapper">
+                        <input type="radio" name="test" class="input-radio" id="test-radio2">
+                        <div class="input-radio-inner">
+                          <div class="input-radio-button"></div>
+                        </div>
+                      </label>
+                    </div>
+
+                    <div class="flex-group">
+                      <label for="check1" class="input-checkbox-wrapper">
+                        <input type="checkbox" class="input-checkbox" id="check1">
+                        <div class="input-checkbox-outer">
+                          <div class="input-checkbox-inner">
+                            <div class="input-checkbox-button"></div>
+                          </div>
+                        </div>
+                      </label>
+
+                      <label for="check2" class="input-checkbox-wrapper">
+                        <input type="checkbox" class="input-checkbox" id="check2" disabled>
+                        <div class="input-checkbox-outer">
+                          <div class="input-checkbox-inner">
+                            <div class="input-checkbox-button"></div>
+                          </div>
+                        </div>
+                      </label>
+
+                      <label for="check3" class="input-checkbox-wrapper">
+                        <input type="checkbox" class="input-checkbox" id="check3" disabled checked>
+                        <div class="input-checkbox-outer">
+                          <div class="input-checkbox-inner">
+                            <div class="input-checkbox-button"></div>
+                          </div>
+                        </div>
+                      </label>
+                    </div>
+
+                    <div class="form-actions center-me">
+                      <button type="button" class="btn">Add another field</button>
+                    </div>
+                  </form>
+          </li>
+          
+          <li id="stuff" class="tab-item inset">
+              <a href="javascript: void(0)" class="btn" id="show-dialog" onclick="showDialog()" data-ignore="true">Show Dialog</a>              
+              <a href="javascript: void(0)" class="btn" onclick="showToast()" data-ignore="true">Show Toast</a>                      
+          </li>
+        </ul>
+    </div>
+        
+        <div class="dialogs">
+            <div class="dialog" id="dialog1">
+                <div class="dialog-title-region">
+                    <h1 class="title">Hello Dialog<h1>
+                </div><script type="text/javascript" src="js/components/dialogs.js"></script>
+                <div class="dialog-content inset">
+                    <p>Hey test dialog</p>
+                </div>
+                <ul class="dialog-actions">
+                    <li><a href="javascript:void(0);" class="dialog-cancel-button">Cancel</a></li>
+                    <li><a href="javascript:void(0);" class="dialog-ok-button">Ok</a></li>
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+        
+</div>
+    
+</body>
+</html>

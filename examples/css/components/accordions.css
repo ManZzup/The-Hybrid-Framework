@@ -1,0 +1,142 @@
+
+/*
+    Accordion Style
+*/
+
+/**
+ *  CSS3 Only Horizontal and Vertical Accordion
+ *  Author: Paul Underwood for Hongkiat.com
+ *  Website: www.paulund.co.uk
+ *  Date: 27/11/11
+ *  Version: 1.0
+ */
+
+/**
+*   Edited to fit the rest of the framework 
+*/
+
+/*Define Accordion box*/
+.accordion { width:100%; overflow:hidden; margin:10px auto; color:#474747; background:#414141; padding:10px; }
+
+/*General Accordion****************************************************************************/
+/*Set style of open slide*/
+.accordion section:target { background:#FFF; padding:10px; overflow-y:scroll}
+.accordion section:target:hover { background:#FFF; }
+.accordion section:target h2 {width:100%;}
+.accordion section:target h2 a{ color:#333;padding:5px}
+.accordion section:target p {display:block;}
+.accordion section h2 a{padding:23px 10px;display:block; font-size:16px; font-weight:normal;color:#eee; text-decoration:none; }
+
+/*set style of closed slide*/
+.accordion section{ float:left;	overflow:hidden; color:#333; cursor:pointer; background: #333; margin:3px; }
+.accordion section:hover {background:#444;}
+.accordion section p { display:none; }
+.accordion section:after{position:relative;font-size:24px;color:#000;font-weight:bold;}
+/*End General Accordion****************************************************************************/
+
+/*Vertical Accordion *************************************************************************/
+.vertical section{ width:100%; height:40px;
+	-webkit-transition:height 0.2s ease-out;
+  	transition:height 0.2s ease-out;
+        -webkit-transform: translate3d(0, 0, 0) !important;
+        -webkit-backface-visibility: hidden !important;
+        -webkit-perspective: 1000 !important;
+}
+/*Set height of the slide*/
+.vertical :target{ height:250px; width:97%; }
+
+.vertical section h2 { position:relative; left:0; top:-15px; }
+
+/*Set position of the number on the slide*/
+.vertical section:after{ top:-60px;left:810px;}
+.vertical section:target:after{ left:-9999px;}
+
+/*
+*   Original Code from http://tympanus.net/codrops/
+*   Applied few edits to suit the rest of the framework
+*/
+
+/*
+.ac-container{
+	width: 100%;
+	text-align: left;
+}
+.ac-container label{
+	padding: 0px 20px;
+	position: relative;
+	display: block;
+	height: 30px;
+	cursor: pointer;
+	color: #777;
+	text-shadow: 1px 1px 1px rgba(255,255,255,0.8);
+	line-height: 33px;
+	font-size: 19px;
+	background: #ffffff;
+	box-shadow: 
+		0px 0px 0px 1px rgba(155,155,155,0.3), 
+		1px 0px 0px 0px rgba(255,255,255,0.9) inset, 
+		0px 2px 2px rgba(0,0,0,0.1);
+}
+.ac-container label:hover{
+	background: #fff;
+}
+.ac-container input:checked + label,
+.ac-container input:checked + label:hover{
+	background: #c6e1ec;
+	color: #3d7489;
+	text-shadow: 0px 1px 1px rgba(255,255,255, 0.6);
+	box-shadow: 
+		0px 0px 0px 1px rgba(155,155,155,0.3), 
+		0px 2px 2px rgba(0,0,0,0.1);
+}
+
+.ac-container label:after{
+        font-family: 'icomoon';
+	content: "\e005";
+	position: absolute;
+	width: 32px;
+	height: 32px;
+	right: 13px;
+	top: 0px;
+}
+.ac-container input:checked + label:after{
+        content: "\e004";
+}
+.ac-container input{
+	display: none;
+}
+.ac-container article{
+	background: rgba(255, 255, 255, 0.5);
+	margin-top: -1px;
+	overflow: hidden;
+	height: 0px;
+	position: relative;	
+	-webkit-transition: height 0.3s;
+	transition: height 0.3s;
+        padding: 1px;
+}
+.ac-container article p{
+	color: #777;
+	line-height: 23px;
+	font-size: 14px;
+	padding: 20px;
+	text-shadow: 1px 1px 1px rgba(255,255,255,0.8);        
+        display: none;
+}
+.ac-container input:checked ~ article{
+	box-shadow: 0px 0px 0px 1px rgba(155,155,155,0.3);
+}
+.ac-container input:checked ~ article p{
+        padding:20px;
+        display: block;
+}
+.ac-container input:checked ~ article.ac-small{
+	height: 140px;
+}
+.ac-container input:checked ~ article.ac-medium{
+	height: 180px;
+}
+.ac-container input:checked ~ article.ac-large{
+	height: 230px;
+}
+*/
