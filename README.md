@@ -3,6 +3,8 @@ The Hybrid Framework
 
 The Hybrid Framework is a lightweight and amazingly fast framework and set of guidelines for developing hybrid Android apps. The primary focus of this is to compile a set of independent components, that can assist in developing HTML/CSS based UI for Adroid Apps.
 
+View Live Demo : https://play.google.com/store/apps/details?id=org.zzl.zontek.android.thf
+
 <div style="align:left">
 
 <img src="https://lh3.googleusercontent.com/-s7puR44TcaE/UwLoFDOY7jI/AAAAAAAAAx4/Q1YA8_fs8GE/s400/Screenshot_2014-02-18-09-56-59.png" />
@@ -86,3 +88,6 @@ List of available components
 12.  Toasts
 13.  Bouncy-smooth scrolling
 14.  Pull-to-refresh for lists
+
+
+
