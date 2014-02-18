@@ -1,0 +1,36 @@
+/*
+*	Style for the grid
+*/
+
+.grid{
+	color:#ffffff;
+	width:100%;
+	height:100%;
+}
+.grid .box{
+	position:relative;
+	width:30%;
+	padding-bottom:30%;	
+	display:inline-block;
+	border:1px solid #333333;
+	margin:1%;
+	font-size:12px;
+	overflow:hidden;
+}
+
+.grid .box .box-content{
+	position:absolute;
+	width:100%;
+	height:100%;
+}
+.grid .box .box-content img{
+	width:100%;
+}
+.grid .box .box-content .overlay{
+	position:absolute;
+	width:100%;
+	bottom:0px;
+	background-color:#000000;
+	opacity:.75;
+	padding:2px;
+}
