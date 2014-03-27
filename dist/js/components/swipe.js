@@ -1,12 +1,3 @@
-function drawerOpen(id){
-    var drawer = document.getElementById(id);
-    drawer.classList.toggle('drawer-open');
-}
-function drawerClose(id){
-    var drawer = document.getElementById(id);
-    drawer.classList.remove('drawer-open');
-}
-
 var SCROLL_THRESHOLD = 50;
 var SWIPE_THRESHOLD = 20;
 var isTouch = false;
@@ -22,7 +13,6 @@ var curY = 0;
  * Used to detect a swipe and to check it's direction, basic usage for the
  * drawer open and close
  */
-/*
 function swipe(target,callback){
     target.addEventListener('touchstart',function(e){
         isTouch = true;
@@ -53,21 +43,24 @@ function swipe(target,callback){
             return;
         }
         if(curX - prevX >= SWIPE_THRESHOLD){
-             callback("right");
-             isTouch = false;
-             prevX = 0;
-             curX = 0;
-             e.preventDefault
-             return false;
+             if(isTouch){
+		     callback("right");
+		     isTouch = false;
+		     prevX = 0;
+		     curX = 0;
+		     e.preventDefault();		     
+		     return false;
+             }
         }
         if(prevX - curX >= SWIPE_THRESHOLD){
-             callback("left");
-             isTouch = false;
-             prevX = 0;
-             curX = 0;
-             e.preventDefault
-             return false;
+             if(isTouch){
+		     callback("left");
+		     isTouch = false;
+		     prevX = 0;
+		     curX = 0;
+		     e.preventDefault();
+		     return false;
+             }
         }
     }
 }
-*/

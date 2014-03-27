@@ -22,6 +22,7 @@ var curY = 0;
  * Used to detect a swipe and to check it's direction, basic usage for the
  * drawer open and close
  */
+/*
 function swipe(target,callback){
     target.addEventListener('touchstart',function(e){
         isTouch = true;
@@ -69,3 +70,4 @@ function swipe(target,callback){
         }
     }
 }
+*/
