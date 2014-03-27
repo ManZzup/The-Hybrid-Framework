@@ -17,3 +17,5 @@ https://github.com/jaunesarmiento/fries
 
 Above html file contains a show of all features in one html page, while individual guides are being prepared please use this for code structure hints.
 
+Live Demo : http://manzzup.github.io/demo/thf/
+
