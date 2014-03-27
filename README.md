@@ -1,7 +1,7 @@
 The Hybrid Framework
 ====================
 
-The Hybrid Framework is a lightweight and amazingly fast framework and set of guidelines for developing hybrid Android apps. The primary focus of this is to compile a set of independent components, that can assist in developing HTML/CSS based UI for Adroid Apps.
+The Hybrid Framework is a lightweight and amazingly fast framework and set of guidelines for developing hybrid Android apps. The primary focus of this is to compile a set of independent components, that can assist in developing HTML/CSS based UI for Adroid Apps. It's an extension of Fries UI framework changed to suit the android systems along with Zynga scroller.
 
 View Live Demo : https://play.google.com/store/apps/details?id=org.zzl.zontek.android.thf
 
